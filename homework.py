@@ -39,6 +39,9 @@ class Training:
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
+# здесь не понял, в каждом классе этот метод
+# перезадается, как этот может выбросить ошибку?
+# и что делать тоже неясно
         pass
 
     def show_training_info(self) -> InfoMessage:
@@ -104,6 +107,9 @@ class Swimming(Training):
 
     def get_mean_speed(self) -> float:
         """Получить среднюю скорость движения."""
+# отмечено как "надо исправить"
+# с комментарием "разве метод родительского класса не подходит?"
+# не подходит, потому что для плавания другая формула.
         mean_speed = (self.length_pool * self.count_pool
                       / self.M_IN_KM / self.duration)
         return mean_speed
